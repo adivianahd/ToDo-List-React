@@ -1,12 +1,14 @@
 import React from 'react';
 
-function List() {
+function List(props) {
     return(
+        <div align="ul">
         <ul>
-            <li>item 1</li>
-            <li>item 2</li>
-            <li>item 3</li>
+            {props.Item.map((e, i)=>
+            <li key={i}>{e}</li>
+            )}
         </ul>
+        </div>
     )
 }
 

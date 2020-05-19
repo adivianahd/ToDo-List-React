@@ -1,8 +1,11 @@
 import React from 'react';
 
-function Button() {
+function Button(props) {
     return(
-        <button>Add item</button>
+        <div>
+        <button onClick={props.click}>Add item</button>
+        <button onClick={props.clear}>Clear List</button>
+        </div>
     )
 }
 

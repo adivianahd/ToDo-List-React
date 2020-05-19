@@ -1,8 +1,12 @@
 import React from 'react';
 
-function Input() {
+function Input(props) {
    return(
-       <input type="text"></input>
+       <input
+        value={props.value} 
+       onChange={e => {
+            props.change(e.target.value);
+       }} type="text"></input>
    ) 
 }
 
